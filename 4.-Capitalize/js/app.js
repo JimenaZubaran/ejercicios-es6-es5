@@ -2,7 +2,7 @@
 
 const word = "este ejercicio pasa a mayusculas la primer letra de cada palabra";
 
-const capitalize = str => {
+/*const capitalize = str => {
   let newStr = str.split(" ");
   let result = [];
     newStr.forEach(palabra=> {
@@ -11,9 +11,23 @@ const capitalize = str => {
       result.push(primerLetra + mediaPalabra);
     });
     console.log(result.join(" "));
-   };	
+   };
 
-capitalize(word);
+capitalize(word);*/
 
 
 // Comenta el código anterior y ahora traducelo a ES5
+
+var capitalize = function(srt){
+  console.log(srt);
+  var newStr = word.split(" ");
+  console.log(newStr);
+  var result = [];
+    newStr.forEach(function(palabra){
+      var primerLetra = palabra.charAt(0).toUpperCase();
+      var mediaPalabra = palabra.slice(1, palabra.length);
+      result.push(primerLetra + mediaPalabra);
+    });
+    console.log(result.join(" "));
+}
+capitalize(word);
