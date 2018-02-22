@@ -3,21 +3,33 @@
 
 // 1.1- Mostrar en la consola un mensaje que diga... "El numero de generaciones es (numero de generaciones en total)"
 
-function generations(obj){
+//ES5
+/*function generations(obj){
+  var gen = Object.keys(obj.generaciones).length;
+  console.log("El numero de generaciones es " + gen);
+}
+generations(laboratoria);*/
 
-    var gen = obj.generaciones
-  console.log(gen);
+//ES6
+const generations = obj => {
+  let gen =  Object.keys(obj.generaciones).length;
+  console.log(`El numero de generaciones es  ${gen}`);
 }
 generations(laboratoria);
 
 
 
-
 // 1.2- Mostrar en la consola un mensaje que diga ... "La (numero de generacion) tuvo (numero de alumnas en esa generacion) alumnas" [Un mensaje por cada generacion]
 
-
-
-
+// ES5
+function totalStudentsGeneration(obj){
+  var  numGenerations =  Object.keys(obj.generaciones);
+  for (var i = 0; i < numGenerations.length; i++){
+ var generation = numGenerations[i];
+ console.log(generation);
+  }
+}
+totalStudentsGeneration(laboratoria)
 
 
 
